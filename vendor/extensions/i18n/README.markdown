@@ -1,10 +1,9 @@
 ### SUMMARY
 
-
 This extension is translations pack for Spree Core.
 
-### Usage
 
+### Usage
 
 **To update translation to your language:**
 
@@ -15,7 +14,8 @@ Remember that you can only edit the values of existing keys, you can't add new o
 
 **To create new translation:**
 
-    rake spree:i18n:new LOCALE=your_lang_code
+* `rake spree:i18n:new LOCALE=your_lang_code`
+* edit `config/locales/your_lang_code_spree.yml`
 
 **To check current translation status:**
 
