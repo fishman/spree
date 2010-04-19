@@ -12,7 +12,11 @@ class User < ActiveRecord::Base
   include AuthlogicOpenid::ActsAsAuthentic::Methods if User.table_exists?
 
   acts_as_authentic do |c|
-    c.transition_from_restful_authentication = true
+    # c.transition_from_restful_authentication = true
+    c.login_field = 'email'
+    # c.crypto_provider = Authlogic::CryptoProviders::MD5
+    c.transition_from_crypto_providers = [ Authlogic::CryptoProviders::MD5 ]
+
     #AuthLogic defaults
     #c.validate_email_field = true
     #c.validates_length_of_email_field_options = {:within => 6..100}
