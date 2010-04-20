@@ -67,7 +67,7 @@ class Product < ActiveRecord::Base
   named_scope :active,      lambda { |*args| Product.not_deleted.available(args.first).scope(:find) }
   named_scope :on_hand,     { :conditions => "products.count_on_hand > 0" }
   named_scope :not_deleted, { :conditions => "products.deleted_at is null" }
-  named_scope :available,   lambda { |*args| { :conditions => ["products.available_on <= ?", args.first || Time.zone.now] } }
+  named_scope :available,   lambda { |*args| { :conditions => ["products.available_on <= ? and (products.expires_on is null or products.expires_on >= ?)", args.first || Time.zone.now, args.first || Time.zone.now] } }
   
   if (ActiveRecord::Base.connection.adapter_name == 'PostgreSQL')
     named_scope :group_by_products_id, { :group => "products." + Product.column_names.join(", products.") } if ActiveRecord::Base.connection.tables.include?("products")

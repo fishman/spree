@@ -76,6 +76,7 @@ en-GB:
         available_on: "Available On"
         cost_price: "Cost Price"
         description: Description
+        expires_on: "Expires On"
         master_price: "Master Price"
         name: Name
         on_hand: "On Hand"
@@ -373,6 +374,7 @@ en-GB:
   expiration: "Expiration"
   expiration_month: "Expiration Month"
   expiration_year: "Expiration Year"
+  expires_on: "Expires On"
   extension: Extension
   extensions: Extensions
   filename: Filename

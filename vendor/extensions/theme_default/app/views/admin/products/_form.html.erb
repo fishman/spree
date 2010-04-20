@@ -42,6 +42,12 @@
       </p>
 
       <p>
+        <%= f.label :expires_on, t("expires_on") %><br />
+        <%= f.error_message_on :expires_on %>
+        <%= f.unobtrusive_date_text_picker :expires_on %>
+      </p>
+
+      <p>
         <%= f.label :sku, t("sku") %><br />
         <%= f.text_field :sku, :size => 16 %>
       </p>

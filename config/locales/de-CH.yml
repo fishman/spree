@@ -76,6 +76,7 @@ de-CH:
         available_on: "Erhältlich ab"
         cost_price: "Cost Price"
         description: Beschreibung
+        expires_on: "Gültig bis"
         master_price: Grundpreis
         name: Name
         on_hand: verfügbar
