@@ -19,3 +19,4 @@ config.action_controller.perform_caching             = true
 
 # Uncomment the line below if you want to use the gateway in test mode while deployed in production
 #ActiveMerchant::Billing::Base.gateway_mode = :test
+config.action_controller.session = { :domain => ".studiblock.de" }

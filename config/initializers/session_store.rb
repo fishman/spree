@@ -5,8 +5,10 @@
 # Make sure the secret is at least 30 characters and all random, 
 # no regular words or you'll be exposed to dictionary attacks.
 ActionController::Base.session = {
-  :key         => '_test_session',
-  :secret      => '61db6a666db4a1a08420f7a194f606293378e9c077e76ae797c99e7acc39b9cff4c511ad871eb782a3dc53801bd03645fbf13701ace275986190f6f4f7dacabe'
+  :key         => '_studiblock_mailer_session',
+  :secret      => 'c3143a08f3d40201c8d80b2530a3f5041354608e4fa41d33ac75a98d604dfb0a2660dc0e848f261e014af7aabc1a21f849a494e6f0e0977892a08c93807cfd25'
+  :expire_after => 5.hours
+
 }
 
 # Use the database for sessions instead of the cookie-based default,
